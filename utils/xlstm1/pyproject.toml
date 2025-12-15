@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=42"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xlstm"
+version = "1.0.3"
+authors = [
+  { name="Maximilian Beck", email="beck@ml.jku.at" },
+  { name="Korbinian Poeppel", email="poeppel@ml.jku.at" },
+  { name="Andreas Auer", email="auer@ml.jku.at" },
+]
+description = "A novel LSTM variant with promising performance compared to Transformers or State Space Models."
+readme = "README.md"
+license = {file="LICENSE"}
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU Affero General Public License v3",
+    "Operating System :: OS Independent",
+]
+keywords = ["LSTM", "Transformer", "Machine Learning", "Deep Learning", "State Space Models"]
+
+
+# [tool.setuptools]
+# include_package_data = true
+
+[tool.setuptools.package-data]
+"xlstm" = ["blocks/slstm/src/cuda/*.c", "blocks/slstm/src/cuda/*.cc", "blocks/slstm/src/cuda/*.h", "blocks/slstm/src/cuda/*.cu", "blocks/slstm/src/cuda/*.cuh", "blocks/slstm/src/util/*.c", "blocks/slstm/src/util/*.cc", "blocks/slstm/src/util/*.h", "blocks/slstm/src/util/*.cu", "blocks/slstm/src/util/*.cuh"]
+
+[project.urls]
+Repository = "https://github.com/NX-AI/xlstm"
+Issues = "https://github.com/NX-AI/xlstm/issues"
